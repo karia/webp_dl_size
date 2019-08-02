@@ -4,8 +4,8 @@ set -eu
 
 echo -e "jpg/png\twebp"
 
-OPTION_NORMAL=" -sS -o /dev/null -w %{size_download}\t"
-OPTION_WEBP=" -sS -o /dev/null -w %{size_download}\n -H Accept:image/webp"
+OPTION_NORMAL=" -sS -o /dev/null -w %{size_download}\t -H Accept-encoding:gzip,deflate,br"
+OPTION_WEBP=" -sS -o /dev/null -w %{size_download}\n -H Accept:image/webp -H Accept-encoding:gzip,deflate,br"
 
 while read URL
 do
